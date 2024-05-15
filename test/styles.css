@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: #383838;
     color: #fff
@@ -13,6 +15,7 @@ h1 {
     background-color: #191919;
     color: #fff;
     padding: 10px 0;
+    border-radius: 5px;
 
 button {
     padding: 10px 20px;
