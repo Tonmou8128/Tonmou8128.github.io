@@ -9,15 +9,10 @@ h1 {
     color: #fff;
 }
 
-header-bar {
+.header-bar {
     background-color: #191919;
     color: #fff;
     padding: 10px 0;
-}
-
-header-title {
-    font-size: 24px;
-}
 
 button {
     padding: 10px 20px;
