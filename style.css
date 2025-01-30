@@ -8,6 +8,7 @@ header {
   color: white;
   background-color: #36CF5F;
   text-align: right;
-  height: 100px;
-  border-bottom: 10px #289946 solid;
+  padding: 15px;
+  height: 40px;
+  border-bottom: 5px #289946 solid;
 }
