@@ -1,8 +1,10 @@
 body {
-  font-family: Arial;
-  background-color: #505050;
+  font-family: Freemono, monospace;
+  background-color: #252525;
+  color: white;
 }
 
 header {
-  color: #36CF5F;
+  color: white;
+  background-color: #36CF5F;
 }
