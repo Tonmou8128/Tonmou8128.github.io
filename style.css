@@ -30,4 +30,6 @@ footer {
   height: 50px;
   color: #ffffff;
   padding: 10px
+  position: absolute;
+  bottom: 0;
 }
