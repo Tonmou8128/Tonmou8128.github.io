@@ -1,6 +1,6 @@
 body {
   font-family: Optima, sans-serif;
-  background: linear-gradient(45deg, #151515, #252525);
+  background: linear-gradient(to-bottom, #151515, #252525);
   color: white;
 }
 
