@@ -11,7 +11,8 @@ header {
   text-align: right;
   height: 25px;
   border-bottom: 5px #289946 solid;
-  padding: 1px 5px 0px 0px;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
