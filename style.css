@@ -1,14 +1,14 @@
 body {
   font-family: Optima, sans-serif;
   height: 100%;
-  background: linear-gradient(to bottom, #151515, #171717, #191919, #212121, #232323, #252525);
+  background: linear-gradient(to bottom, #151515, #252525);
   color: white;
 }
 
 header {
   color: white;
   background-color: #36CF5F;
-  height: 25px;
+  height: 30px;
   border-bottom: 5px #289946 solid;
   display: flex;
   align-items: center;
@@ -24,13 +24,21 @@ h2 {
   text-align: center;
 }
 
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  text-align: center;
+}
+
 footer {
   background-color: #101010;
   text-align: center;
   height: 50px;
   color: #ffffff;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
