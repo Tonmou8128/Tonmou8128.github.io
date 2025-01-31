@@ -1,14 +1,14 @@
 body {
   font-family: Optima, sans-serif;
   height: 100%;
-  background: linear-gradient(to bottom, #151515, #252525);
+  background: linear-gradient(to bottom, #151515, #353535);
   color: white;
 }
 
 header {
   color: white;
   background-color: #36CF5F;
-  height: 30px;
+  height: 40px;
   border-bottom: 5px #289946 solid;
   display: flex;
   align-items: center;
@@ -24,6 +24,11 @@ h2 {
   text-align: center;
 }
 
+.banner {
+  background-image: url("assets/bannière.png");
+  width: 100vw;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -33,6 +38,7 @@ h2 {
   flex: 1;
   display: flex;
   text-align: center;
+  align-items: center;
 }
 
 footer {
