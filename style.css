@@ -8,11 +8,12 @@ body {
 header {
   color: white;
   background-color: #36CF5F;
-  text-align: right;
   height: 25px;
   border-bottom: 5px #289946 solid;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding: 0px 5px
 }
 
 h1 {
