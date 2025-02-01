@@ -10,13 +10,16 @@ header {
   background-color: #36CF5F;
   height: 40px;
   border-bottom: 5px #289946 solid;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
   padding: 0px 5px
 }
 
 .headerright {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerleft {
   display: flex;
   justify-content: flex-end;
 }
