@@ -13,6 +13,7 @@ header {
   border-bottom: 5px #289946 solid;
   align-items: center;
   padding: 0px 25px;
+  justify-content: space-between;
 }
 
 .headerleft {
@@ -22,6 +23,7 @@ header {
 
 .headerright {
   text-align: right;
+  flex: 1;
 }
 
 h1 {
