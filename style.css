@@ -11,7 +11,8 @@ header {
   height: 40px;
   border-bottom: 5px #289946 solid;
   align-items: center;
-  padding: 0px 5px
+  padding: 0px 5px;
+  display: flex;
 }
 
 .headerright {
