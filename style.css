@@ -11,11 +11,12 @@ header {
   height: 40px;
   border-bottom: 5px #289946 solid;
   align-items: center;
-  padding: 0px 5px;
+  padding: 0px 25px;
 }
 
-.headerright {
-  justify-content: end;
+.headerright, .headerleft {
+  display: flex;
+  gap: 0px 70px;
 }
 
 h1 {
