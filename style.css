@@ -32,6 +32,10 @@ header {
   flex: 1;
 }
 
+a {
+  color: #000000;
+}
+
 h1 {
   text-align: center;
 }
