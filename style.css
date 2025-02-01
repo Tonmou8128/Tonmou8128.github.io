@@ -15,8 +15,9 @@ header {
   padding: 0px 25px;
 }
 
-.headerright, .headerleft {
+.headerleft {
   display: flex;
+  text-align: left;
 }
 
 .headerright {
