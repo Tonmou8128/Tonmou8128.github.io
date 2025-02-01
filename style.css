@@ -21,11 +21,6 @@ header {
   justify-content: flex-end;
 }
 
-.headerleft {
-  display: flex;
-  justify-content: flex-start;
-}
-
 h1 {
   text-align: center;
 }
