@@ -16,10 +16,15 @@ header {
   justify-content: space-between;
 }
 
-.headerleft {
+.headerleft1 {
   display: flex;
   text-align: left;
-  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.headerleft2 {
+  display: flex;
+  text-align: left
 }
 
 .headerright {
