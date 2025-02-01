@@ -19,6 +19,10 @@ header {
   gap: 0px 70px;
 }
 
+.headerright {
+  justify-content: flex-end;
+}
+
 h1 {
   text-align: center;
 }
