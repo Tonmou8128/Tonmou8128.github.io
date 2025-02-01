@@ -19,7 +19,7 @@ header {
 .headerleft {
   display: flex;
   text-align: left;
-  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .headerright {
