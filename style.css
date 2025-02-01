@@ -16,7 +16,7 @@ header {
 }
 
 .headerright, .headerleft {
-  gap: 0px 70px;
+  gap: 70px;
 }
 
 .headerright {
