@@ -19,6 +19,7 @@ header {
 .headerleft {
   display: flex;
   text-align: left;
+  gap: 30px;
 }
 
 .headerright {
