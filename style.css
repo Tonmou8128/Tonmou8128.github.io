@@ -7,7 +7,7 @@ body {
 
 header {
   display: flex;
-  color: white;
+  color: #000000;
   background-color: #36CF5F;
   height: 40px;
   border-bottom: 5px #289946 solid;
