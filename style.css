@@ -16,6 +16,7 @@ header {
 }
 
 .headerright, .headerleft {
+  display: flex;
   gap: 70px;
 }
 
