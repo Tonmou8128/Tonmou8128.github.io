@@ -11,9 +11,14 @@ header {
   height: 40px;
   border-bottom: 5px #289946 solid;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: flex-end;
   padding: 0px 5px
+}
+
+.headerright {
+  display: flex;
+  justify-content: flex-end;
 }
 
 h1 {
@@ -46,6 +51,7 @@ footer {
   height: 50px;
   color: #ffffff;
   justify-content: center;
+  align-items: center;
   width: 100%;
   border-top: #050505;
 }
