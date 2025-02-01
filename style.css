@@ -20,7 +20,7 @@ header {
 }
 
 .headerright {
-  justify-content: flex-end;
+  text-align: right;
 }
 
 h1 {
