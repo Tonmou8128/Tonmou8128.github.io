@@ -44,6 +44,10 @@ h1 {
   width: 100%;
 }
 
+.pp {
+  size: 70%;
+}
+
 .container {
   display: flex;
 }
