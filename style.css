@@ -51,6 +51,7 @@ h1 {
 .left, .right {
   flex: 1;
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
 }
