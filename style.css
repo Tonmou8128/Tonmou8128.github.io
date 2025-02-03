@@ -38,15 +38,10 @@ a {
 
 h1 {
   text-align: center;
-  font-size: large;
 }
 
 h2 {
-  font-size: medium
-}
-
-p {
-  font-size: small;
+  text-align: center;
 }
 
 .banner {
