@@ -4,6 +4,7 @@ body {
   height: 100vh;
   background: linear-gradient(45deg, #151515, #353535);
   color: white;
+  text-align: left;
 }
 
 header {
