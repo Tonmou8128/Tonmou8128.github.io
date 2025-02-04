@@ -46,8 +46,9 @@ h1 {
 }
 
 .pp {
-  width: 35%;
+  width: 25%;
   height: auto;
+  padding: 10px;
 }
 
 .container {
