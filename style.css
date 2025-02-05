@@ -35,8 +35,6 @@ header {
 
 .headerright {
   text-align: right;
-  margin-left: auto;
-  flex: 1;
 }
 
 a {
