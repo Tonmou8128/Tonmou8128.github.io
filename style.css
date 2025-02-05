@@ -9,6 +9,7 @@ body {
 p {
   text-align: left;
   padding: 5px;
+  line-height: 25px;
 }
 
 header {
