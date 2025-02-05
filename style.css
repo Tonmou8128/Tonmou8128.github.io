@@ -77,3 +77,10 @@ footer {
   width: 100%;
   border-top: #050505;
 }
+
+.code-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid #000000;
+}
