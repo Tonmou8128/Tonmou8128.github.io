@@ -84,3 +84,7 @@ footer {
   text-align: left;
   border: 1px solid #000000;
 }
+
+tr {
+  background-color: #252525;
+}
