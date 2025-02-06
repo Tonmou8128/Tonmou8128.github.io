@@ -83,9 +83,12 @@ footer {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid #000000;
 }
 
 tr {
   background-color: #252525;
+}
+
+td {
+  border: 2px solid black;
 }
