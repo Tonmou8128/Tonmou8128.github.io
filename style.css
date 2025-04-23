@@ -72,6 +72,10 @@ h1, h2 {
   width: 35%;
 }
 
+.description {
+  size: 12px;
+}
+
 footer {
   display: flex;
   background-color: #101010;
