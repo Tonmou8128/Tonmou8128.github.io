@@ -40,7 +40,6 @@ a {
 h1, h2 {
   text-align: center;
 }
-**
 
 .banner {
   width: 100%;
@@ -85,20 +84,6 @@ footer {
   width: 100%;
   border-top: #050505;
   margin: 0px, 3px;
-}
-
-.code-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-tr {
-  background-color: #36cf5f81;
-}
-
-td, th {
-  border: 2px solid black;
 }
 
 .emoji {
