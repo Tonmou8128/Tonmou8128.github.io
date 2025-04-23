@@ -40,14 +40,13 @@ a {
 h1, h2 {
   text-align: center;
 }
+**
 
 .banner {
   width: 100%;
 }
 
 .pp {
-  width: 25%;
-  height: auto;
   padding: 10px;
 }
 
@@ -73,7 +72,8 @@ h1, h2 {
 }
 
 .description {
-  font-size: 12px;
+  font-^
+  size: 12px;
 }
 
 footer {
