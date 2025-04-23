@@ -63,10 +63,7 @@ h1, h2 {
 
 .left {
   margin: 20px;
-}
-
-.right {
-  width: 20%;
+  size: 80%;
 }
 
 .description {
