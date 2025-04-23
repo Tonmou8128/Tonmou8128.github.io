@@ -67,6 +67,10 @@ h1, h2 {
   margin: 20px;
 }
 
+.right {
+  width: 35%;
+}
+
 footer {
   display: flex;
   background-color: #101010;
