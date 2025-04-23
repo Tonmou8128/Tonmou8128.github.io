@@ -101,3 +101,8 @@ tr {
 td, th {
   border: 2px solid black;
 }
+
+.emoji {
+  height: 1em;
+  width: auto;
+}
