@@ -63,7 +63,7 @@ h1, h2 {
 
 .left {
   margin: 20px;
-  size: 80%;
+  flex: 4;
 }
 
 .description {
