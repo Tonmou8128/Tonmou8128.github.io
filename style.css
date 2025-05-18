@@ -46,6 +46,8 @@ h1, h2 {
 }
 
 .pp {
+  width: 100%;
+  height: auto;
   padding: 10px;
 }
 
