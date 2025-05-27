@@ -1,4 +1,4 @@
-const colorsHeader = ["brown", "blue", "violet", "green"];
+const colorsHeader = ["#f3f55f", "#67d9e4", "#b567e4", "#36cf5f"];
 const colorsHeaderBorder = ["red", "black", "orange", "pink"]
 
 let date = new Date();
