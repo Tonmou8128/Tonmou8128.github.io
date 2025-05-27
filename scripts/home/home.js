@@ -1,5 +1,5 @@
-const colorsHeader = ["#f3f55f", "#67d9e4", "#b567e4", "#36cf5f"];
-const colorsHeaderBorder = ["red", "black", "orange", "pink"]
+const colorsHeader = ["#f3f55f", "#67d9e4", "#b567e4", "#36cf5f"]; // jaune - bleu - violet - vert
+const colorsHeaderBorder = ["#e2d22f", "#46c3cf", "#9d47d1", "#289946"] // pareil
 
 function headerColor(){
     let date = new Date();
