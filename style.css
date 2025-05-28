@@ -97,6 +97,8 @@ footer {
 }
 
 .icon {
+  display: flex;
+  justify-content: center;
   width: 70%;
   height: auto;
   outline: 5px solid #000000;
