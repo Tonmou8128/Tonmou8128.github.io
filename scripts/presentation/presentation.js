@@ -1,3 +1,3 @@
-import { headerColor } from "./home/home.js"
+import { headerColor } from "./home/home.js";
 
-headerColor()
+headerColor();
