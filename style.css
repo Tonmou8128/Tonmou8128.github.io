@@ -100,4 +100,5 @@ footer {
 .icon {
   width: 90%;
   height: auto;
+  border: 5px solid #000000;
 }
