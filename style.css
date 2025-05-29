@@ -34,6 +34,10 @@ header {
 }
 
 a {
+  color: #ffffff;
+}
+
+.headerlink {
   color: #000000;
 }
 
