@@ -11,7 +11,7 @@ function iconColor(){
     const colorsHeader = ["#f3f55f", "#67d9e4", "#b567e4", "#36cf5f"];
     let date = new Date();
     let choice = Math.floor(date.getMinutes() / 15);
-    document.querySelectorAll(".icon").style.border = "5px solid " + colorsHeader[choice]
+    document.querySelectorAll(".icon").forEach(img => img.style.border = "5px solid " + colorsHeader[choice])
 }
 
 headerColor();
