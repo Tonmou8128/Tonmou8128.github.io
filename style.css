@@ -116,3 +116,8 @@ code {
   background-color: #202020;
   font-family: courier, monospace;
 }
+
+.midSize {
+  width: 70%;
+  height: auto;
+}

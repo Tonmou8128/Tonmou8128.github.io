@@ -21,10 +21,26 @@
         <h2>Présentation</h2>
         <p>Un Add-On Minercaft Bedrock permet d'ajouter du gameplay personnalisé, tel que des nouveaux objets, nouveaux blocs, etc... Dans cet Add-On, un nouvel objet et des nouveaux "enchantements" sont ajoutés.</p>
         <p>Le parchemin permet d'obtenir une bénédiction, une sorte d'enchantement qui s'active une fois sur cinquante. Il y en a 5 différentes. Le code source ainsi que des explications plus détaillées sont disponibles sur mon GitHub: <a href =https://github.com/Tonmou8128/Benedictions-Add-On>https://github.com/Tonmou8128/Benedictions-Add-On</a></p>
-        <img src="../assets/projets/benedictions/parchemin.png">
-        <h2>Aspect informatique</h2>
+        <img class="midSize" src="../assets/projets/benedictions/parchemin.png">
+        <h2>Aspects informatiques</h2>
         <h3>Gestion des objets</h3>
         <p>Ce projet m'a appris à maîtriser les objets en javascript, à l'aide des fonctions comme <code>Object.keys()</code>, <code>Object.values()</code>, ou <code>Object.entries()</code>.</p>
+        <p>On retrouve dans cet Add-On un grand objet plutôt complexe d'ailleurs:</p>
+        <div class="booxCode"><pre>
+            const benedictionsDef = {
+                Hurricane: {
+                    glyph: "",
+                    color: "§u",
+                    function: (damagingEntity, hitEntity) => hurricane(damagingEntity, hitEntity)
+                },
+                Oni: {
+                    glyph: "",
+                    color: "§j",
+                    function: (damagingEntity, hitEntity) => oni(damagingEntity, hitEntity)
+                },
+                //etc...
+            }
+        </pre></div>
         <h3>Tables de loot</h3>
         <p>J'ai appris pour la première fois le fonctionnement des tables de loot de Minecraft Bedrock.</p>
         <div class="boxCode"><pre>
@@ -41,7 +57,8 @@
                 }
             ]
         </pre></div>
-        <p></p>
+        <h3>Fonctions fléchées</h3>
+        <p>J'ai également bien mieux compris le fonctionnement des fonctions fléchées en javascript. Je les ai notamment utilisées avec <code>forEach()</code>, <code>find()</code>, ou encore <code>some()</code></p>
         <footer>
             <p>©Tonmou8128 - Tous droits réservés - 2025</p>
         </footer>
