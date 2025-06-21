@@ -109,4 +109,10 @@ footer {
 
 code {
   background-color: #454545;
+  font-family: courier, monospace;
+}
+
+.boxCode {
+  background-color: #202020;
+  font-family: courier, monospace;
 }
