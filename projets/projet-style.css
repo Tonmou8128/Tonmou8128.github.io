@@ -4,3 +4,9 @@ img {
     padding: 5px;
     justify-content: center;
 }
+
+.vertialdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
