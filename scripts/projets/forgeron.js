@@ -112,3 +112,6 @@ async function forgePack() {
         saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
     })
 }
+
+document.querySelectorB("button#download").addEventListener("click", forgePack);
+document.querySelector("button#additem").addEventListener("click", addItem);
