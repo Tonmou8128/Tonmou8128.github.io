@@ -25,7 +25,7 @@ function uuid() {
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
-    const packVersion = [document.getElementById("packVersion1") ?? 0, document.getElementById("packVersion2") ?? 0, document.getElementById("packVersion3") ?? 0]
+    const packVersion = [document.getElementById("packVersion1").value ?? 0, document.getElementById("packVersion2").value ?? 0, document.getElementById("packVersion3").value ?? 0]
     const manifest = {
         format_version: 2,
         header: {
@@ -89,25 +89,26 @@ function forgeItemTexture() {
         texture_data: {}
     };
     itemsBp.forEach(item => {
-        itemTexture.texture_data[item[1]] = {textures = `textures/items/${item[1].split(":")[1]}`}
+        itemTexture.texture_data[item[1]] = {textures: `textures/items/${item[1].split(":")[1]}`}
     });
+    return JSON.stringify(itemTexture, null, 2);
 }
 
-function forgePack() {
+async function forgePack() {
     let pack = new JSZip();
-    zip.file("BP/manifest.json", forgeManifest("data"));
-    zip.file("RP/manifest.json", forgeManifest("resources"));
+    pack.file("BP/manifest.json", forgeManifest("data"));
+    pack.file("RP/manifest.json", forgeManifest("resources"));
     itemsBp.forEach(item => {
-        zip.file(`BP/items/${item[1].split(":")[1]}.json`, forgeItemJson(item));
-        zip.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
+        pack.file(`BP/items/${item[1].split(":")[1]}.json`, forgeItemJson(item));
+        pack.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
     });
     itemsRp.forEach(item => {
         const image = await item.arrayBuffer();
-        zip.file(`RP/textures/item/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
-        zip.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
-        zip.file("RP/textures/item_texture.json", forgeItemTexture());
+        pack.file(`RP/textures/items/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
+        pack.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
+        pack.file("RP/textures/item_texture.json", forgeItemTexture());
     });
-    zip.generateAsync({type: "blob"}).then(blob => {
+    pack.generateAsync({type: "blob"}).then(blob => {
         saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
     })
 }
