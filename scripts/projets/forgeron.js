@@ -107,4 +107,7 @@ function forgePack() {
         zip.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
         zip.file("RP/textures/item_texture.json", forgeItemTexture());
     });
+    zip.generateAsync({type: "blob"}).then(blob => {
+        saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
+    })
 }
