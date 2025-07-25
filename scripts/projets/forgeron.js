@@ -102,7 +102,7 @@ async function forgePack() {
         pack.file(`BP/items/${item[1].split(":")[1]}.json`, forgeItemJson(item));
         pack.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
     });
-    for(let item of itemsRp) {
+    for (let item of itemsRp) {
         const image = await item.arrayBuffer();
         pack.file(`RP/textures/items/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
         pack.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
