@@ -1,5 +1,5 @@
 import JSZip from "https://esm.sh/jszip";
-import { saveAs } from "https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js";
+import * as FileSaver from "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js";
 
 let itemsBp = [];
 let itemsRp = [];
