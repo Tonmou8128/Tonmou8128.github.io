@@ -1,4 +1,4 @@
-import JSZip from "./jszip.js"
+import * as JSZip from "./jszip.js"
 
 let itemsBp = [];
 let itemsRp = [];
