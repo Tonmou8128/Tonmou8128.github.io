@@ -1,4 +1,5 @@
 import JSZip from "https://esm.sh/jszip";
+import * as FileSaver from "./FileSaver";
 
 let itemsBp = [];
 let itemsRp = [];
