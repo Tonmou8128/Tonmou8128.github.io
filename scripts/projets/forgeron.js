@@ -75,11 +75,22 @@ function forgeItemLang(itemName, itemId) {
 }
 
 function forgeCompleteItemLang() {
-    let lang = ""
+    let lang = "";
     itemsBp.forEach(item => {
         lang += forgeItemLang(item[0], item[1]) + "\n";
     });
     return lang;
+}
+
+function forgeItemTexture() {
+    itemTexture = {
+        resource_pack_name: document.getElementById("packName").value,
+        texture_name: "atlas.items",
+        texture_data: {}
+    };
+    itemsBp.forEach(item => {
+        itemTexture.texture_data[item[1]] = {textures = `textures/items/${item[1].split(":")[1]}`}
+    });
 }
 
 function forgePack() {
@@ -94,5 +105,6 @@ function forgePack() {
         const image = await item.arrayBuffer();
         zip.file(`RP/textures/item/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
         zip.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
+        zip.file("RP/textures/item_texture.json", forgeItemTexture());
     });
 }
