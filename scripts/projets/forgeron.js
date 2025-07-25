@@ -52,8 +52,14 @@ function addItem() {
     const itemIcon = document.getElementById("itemIcon").files[0];
     const itemIconName = itemId.split(":")[1];
     const itemCategory = document.getElementById("itemCategory").value;
+    console.log("🧪 Icône sélectionnée :", itemIcon);
+    if (!itemName || !itemId || !itemIcon || !itemCategory) {
+        alert("Tous les champs doivent être remplis, y compris l’icône !");
+        return;
+    };
     itemsBp.push([itemName, itemId, itemIconName, itemCategory]);
     itemsRp.push(itemIcon);
+    console.log("🧱 itemsRp :", itemsRp);
 }
 
 function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
@@ -107,6 +113,7 @@ async function forgePack() {
         pack.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
     });
     for (let item of itemsRp) {
+        console.log("📸 Image type :", item.type);
         const image = await item.arrayBuffer();
         pack.file(`RP/textures/items/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
         pack.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
