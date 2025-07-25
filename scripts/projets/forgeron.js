@@ -17,3 +17,23 @@ function uuid() {
   return newUuid;
 }
 
+function forgeManifest(type) {
+    const packName = document.getElementById("packName").value;
+    const packDescription = document.getElementById("packDescription").value;
+    const manifest = {
+        format_version: 2,
+        header: {
+            name: packName,
+            description: packDescription
+        },
+        modules: []
+    }
+    JSON.stringify(manifest, null, 2)
+}
+
+function forgeItem() {
+    const itemName = document.getElementById("itemName").value;
+    const itemId = document.getElementById("itemId").value;
+    const itemIcon = document.getElementById("itemIcon").files[0];
+    const itemIconName = itemIcon.split(":")[1];
+}
