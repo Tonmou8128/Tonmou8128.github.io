@@ -1,4 +1,4 @@
-import * as JSZip from "./jszip.js"
+import JSZip from "https://esm.sh/jszip";
 
 let itemsBp = [];
 let itemsRp = [];
@@ -97,6 +97,7 @@ function forgeItemTexture() {
 
 async function forgePack() {
     console.log("Download");
+    window.JSZip = JSZip;
     let pack = new JSZip();
     pack.file("BP/manifest.json", forgeManifest("data"));
     pack.file("RP/manifest.json", forgeManifest("resources"));
