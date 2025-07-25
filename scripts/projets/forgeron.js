@@ -20,15 +20,23 @@ function uuid() {
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
+    const packVersion = [document.getElementById("packVersion1") ?? 0, document.getElementById("packVersion2") ?? 0, document.getElementById("packVersion3") ?? 0]
     const manifest = {
         format_version: 2,
         header: {
             name: packName,
-            description: packDescription
+            description: packDescription,
+            uuid: uuid(),
+            version: packVersion,
+            min_engine_version: [1, 16, 0]
         },
-        modules: []
+        modules: [{
+            type: type,
+            uuid: uuid(),
+            version: packVersion
+        }]
     }
-    JSON.stringify(manifest, null, 2)
+    return JSON.stringify(manifest, null, 2)
 }
 
 function forgeItem() {
