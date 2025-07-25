@@ -10,3 +10,9 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+button {
+    color: #FFFFFF;
+    background-color: #2c2c2c;
+    border-color: #2c2c2c;
+}
