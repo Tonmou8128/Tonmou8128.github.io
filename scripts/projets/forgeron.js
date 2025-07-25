@@ -1,5 +1,5 @@
 import JSZip from "https://esm.sh/jszip";
-import * as FileSaver from "./FileSaver.js";
+import FileSaver from "./FileSaver.js";
 
 let itemsBp = [];
 let itemsRp = [];
@@ -120,7 +120,7 @@ async function forgePack() {
         pack.file("RP/textures/item_texture.json", forgeItemTexture());
     };
     pack.generateAsync({type: "blob"}).then(blob => {
-        saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
+        FileSaver.saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
     })
 }
 
