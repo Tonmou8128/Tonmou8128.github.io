@@ -120,7 +120,7 @@ async function forgePack() {
         pack.file("RP/textures/item_texture.json", forgeItemTexture());
     };
     pack.generateAsync({type: "blob"}).then(blob => {
-        FileSaver.saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
+        saveAs(blob, `${document.getElementById("packName").value}.mcaddon`);
     })
 }
 
