@@ -1,4 +1,4 @@
-import * as JSZip from "./jszip.js"
+import JSZip from "./jszip.js"
 
 let itemsBp = [];
 let itemsRp = [];
@@ -45,6 +45,7 @@ function forgeManifest(type) {
 }
 
 function addItem() {
+    console.log("AddItem");
     const itemName = document.getElementById("itemName").value;
     const itemId = document.getElementById("itemId").value;
     const itemIcon = document.getElementById("itemIcon").files[0];
@@ -95,6 +96,7 @@ function forgeItemTexture() {
 }
 
 async function forgePack() {
+    console.log("Download");
     let pack = new JSZip();
     pack.file("BP/manifest.json", forgeManifest("data"));
     pack.file("RP/manifest.json", forgeManifest("resources"));
