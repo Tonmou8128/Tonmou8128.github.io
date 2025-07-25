@@ -39,6 +39,8 @@ function forgeManifest(type) {
     return JSON.stringify(manifest, null, 2)
 }
 
+
+
 function forgeItem() {
     const itemName = document.getElementById("itemName").value;
     const itemId = document.getElementById("itemId").value;
