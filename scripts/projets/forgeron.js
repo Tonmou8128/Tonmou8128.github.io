@@ -113,5 +113,5 @@ async function forgePack() {
     })
 }
 
-document.querySelectorB("button#download").addEventListener("click", forgePack);
+document.querySelector("button#download").addEventListener("click", forgePack);
 document.querySelector("button#additem").addEventListener("click", addItem);
