@@ -91,7 +91,7 @@ function forgeCompleteItemLang() {
 }
 
 function forgeItemTexture() {
-    itemTexture = {
+    let itemTexture = {
         resource_pack_name: document.getElementById("packName").value,
         texture_name: "atlas.items",
         texture_data: {}
