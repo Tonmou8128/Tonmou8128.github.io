@@ -68,11 +68,11 @@ function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
         "minecraft:item": {
             description: {
                 identifier: itemId,
-                menu_category: {
-                    category: itemCategory
-                }
+                category: itemCategory
             },
-            components: {}
+            components: {
+                "minecraft:icon": itemId
+            }
         }
     };
     return JSON.stringify(item, null, 2);
@@ -97,7 +97,7 @@ function forgeItemTexture() {
         texture_data: {}
     };
     itemsBp.forEach(item => {
-        itemTexture.texture_data[item[1].split(":")[1]] = {textures: `textures/items/${item[1].split(":")[1]}`}
+        itemTexture.texture_data[item[1]] = {textures: `textures/items/${item[1].split(":")[1]}`}
     });
     return JSON.stringify(itemTexture, null, 2);
 }
