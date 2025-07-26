@@ -23,6 +23,15 @@ function uuid() {
   return newUuid;
 }
 
+function isInt(numbers) {
+  const intList = "0123456789".split("");
+  const strList = numbers.split("");
+  strList.forEach(c => {
+    if (!intList.includes(c)) return false;
+  });
+  return true;
+}
+
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
@@ -105,7 +114,7 @@ function readyToForge() {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
     const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
-    if (packName == undefined || packDescription == undefined || typeof packVersion[0] !== "integrer" || typeof packVersion[1] !== "integrer" || typeof packVersion[2] !== "integrer") return false;
+    if (packName == undefined || packDescription !== undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2])) return false;
     else return true;
 }
 
