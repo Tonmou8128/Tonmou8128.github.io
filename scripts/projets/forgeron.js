@@ -68,7 +68,9 @@ function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
         "minecraft:item": {
             description: {
                 identifier: itemId,
-                category: itemCategory
+                menu_category: {
+                    category: itemCategory
+                }
             },
             components: {
                 "minecraft:icon": itemId
