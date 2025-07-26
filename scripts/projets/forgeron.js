@@ -26,7 +26,7 @@ function uuid() {
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
-    const packVersion = [paseInt(document.getElementById("packVersion1").value ?? 0), parseInt(document.getElementById("packVersion2").value ?? 0), parseInt(document.getElementById("packVersion3").value ?? 0)]
+    const packVersion = [parseInt(document.getElementById("packVersion1").value ?? 0), parseInt(document.getElementById("packVersion2").value ?? 0), parseInt(document.getElementById("packVersion3").value ?? 0)]
     const manifest = {
         format_version: 2,
         header: {
