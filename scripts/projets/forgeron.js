@@ -13,7 +13,7 @@ function uuid() {
     if (x === "x") {
       newUuid += choicex[Math.floor(Math.random() * 16)];
     }
-    else if (x === "y") {
+     else if (x === "y") {
       newUuid += choicey[Math.floor(Math.random() * 4)]
     }
     else {
@@ -26,7 +26,7 @@ function uuid() {
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
-    const packVersion = [parseInt(document.getElementById("packVersion1").value ?? 0), parseInt(document.getElementById("packVersion2").value ?? 0), parseInt(document.getElementById("packVersion3").value ?? 0)]
+    const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
     const manifest = {
         format_version: 2,
         header: {
@@ -46,20 +46,17 @@ function forgeManifest(type) {
 }
 
 function addItem() {
-    console.log("AddItem");
     const itemName = document.getElementById("itemName").value;
     const itemId = document.getElementById("itemId").value;
     const itemIcon = document.getElementById("itemIcon").files[0];
     const itemIconName = itemId.split(":")[1];
     const itemCategory = document.getElementById("itemCategory").value;
-    console.log("🧪 Icône sélectionnée :", itemIcon);
     if (!itemName || !itemId || !itemIcon || !itemCategory) {
-        alert("Tous les champs doivent être remplis, y compris l’icône !");
+        alert("Veuillez remplir tous les champs obligatoires");
         return;
     };
     itemsBp.push([itemName, itemId, itemIconName, itemCategory]);
     itemsRp.push(itemIcon);
-    console.log("🧱 itemsRp :", itemsRp);
 }
 
 function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
@@ -104,8 +101,19 @@ function forgeItemTexture() {
     return JSON.stringify(itemTexture, null, 2);
 }
 
+function readyToForge() {
+    const packName = document.getElementById("packName").value;
+    const packDescription = document.getElementById("packDescription").value;
+    const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
+    if (packName == undefined || packDescription == undefined || typeof packVersion[0] !== "integrer" || typeof packVersion[1] !== "integrer" || typeof packVersion[2] !== "integrer") return false;
+    else return true;
+}
+
 async function forgePack() {
-    console.log("Download");
+    if (!readyToForge()) {
+        alert("Veuillez remplir tous les champs de la section principale.");
+        return;
+    };
     window.JSZip = JSZip;
     let pack = new JSZip();
     pack.file("BP/manifest.json", forgeManifest("data"));
@@ -115,7 +123,6 @@ async function forgePack() {
         pack.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
     });
     for (let item of itemsRp) {
-        console.log("📸 Image type :", item.type);
         const image = await item.arrayBuffer();
         pack.file(`RP/textures/items/${itemsBp[itemsRp.indexOf(item)][1].split(":")[1]}.png`, image);
         pack.file("RP/texts/fr_FR.lang", forgeCompleteItemLang());
