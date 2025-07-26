@@ -5,20 +5,30 @@ img {
     justify-content: center;
 }
 
-.vertialdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.verticaldiv {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px;
 }
 
 button {
     color: #FFFFFF;
     background: #2c2c2c;
-    border-color: #2c2c2c;
+    border: 3px solid #2c2c2c;
 }
 
 .packVersion1, .packVersion2, .packVersion3 {
-    width: 5;
-    background: #2c2c2c
+    width: 20px;
+}
+
+label {
+  margin: 5px;
+}
+
+input {
+  background-color: #454545;
+  border: 1px solid black;
+  outline: none;
+  color: white;
 }
