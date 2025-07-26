@@ -114,7 +114,7 @@ function readyToForge() {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
     const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
-    if (packName == undefined || packDescription !== undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2])) return false;
+    if (packName == undefined || packDescription == undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2])) return false;
     else return true;
 }
 
