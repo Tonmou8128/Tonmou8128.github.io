@@ -79,7 +79,7 @@ function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
 }
 
 function forgeItemLang(itemName, itemId) {
-    return `item.${itemId}=${itemName}`;
+    return `item.${itemId}.name=${itemName}`;
 }
 
 function forgeCompleteItemLang() {
@@ -97,7 +97,7 @@ function forgeItemTexture() {
         texture_data: {}
     };
     itemsBp.forEach(item => {
-        itemTexture.texture_data[item[1]] = {textures: `textures/items/${item[1].split(":")[1]}`}
+        itemTexture.texture_data[item[1].split(":")[1]] = {textures: `textures/items/${item[1].split(":")[1]}`}
     });
     return JSON.stringify(itemTexture, null, 2);
 }
