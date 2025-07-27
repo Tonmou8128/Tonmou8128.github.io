@@ -24,12 +24,13 @@ function uuid() {
 }
 
 function isInt(numbers) {
-  const intList = "0123456789".split("");
-  const strList = numbers.split("");
-  strList.forEach(c => {
-    if (!intList.includes(c)) return false;
-  });
-  return true;
+    console.log(typeof numbers);
+    const intList = "0123456789".split("");
+    const strList = numbers.split("");
+    strList.forEach(c => {
+        if (!intList.includes(c)) return false;
+    });
+    return true;
 }
 
 function forgeManifest(type) {
@@ -61,11 +62,12 @@ function addItem() {
     const itemIconName = itemId.split(":")[1];
     const itemCategory = document.getElementById("itemCategory").value;
     if (!itemName || !itemId || !itemIcon || !itemCategory) {
-        alert("Veuillez remplir tous les champs obligatoires");
+        alert("Veuillez remplir tous les champs obligatoires.");
         return;
     };
     itemsBp.push([itemName, itemId, itemIconName, itemCategory]);
     itemsRp.push(itemIcon);
+    alert("Item ajouté avec succès.")
 }
 
 function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
