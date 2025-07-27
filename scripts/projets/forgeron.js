@@ -107,7 +107,7 @@ function readyToForge() {
     const packDescription = document.getElementById("packDescription").value;
     const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
     const packIcon = document.getElementById("packIcon").files[0];
-    if (packName == undefined || packDescription == undefined || isNan(packVersion[0]) || isNan(packVersion[1]) || isNan(packVersion[2]) || packIcon == undefined) return false;
+    if (packName == undefined || packDescription == undefined || isNaN(packVersion[0]) || isNaN(packVersion[1]) || isNaN(packVersion[2]) || packIcon == undefined) return false;
     else return true;
 }
 
