@@ -16,6 +16,7 @@ button, select {
     color: #FFFFFF;
     background: #2c2c2c;
     border: 3px solid #2c2c2c;
+    margin: 5px;
 }
 
 #packVersion1, #packVersion2, #packVersion3 {
