@@ -116,7 +116,8 @@ function readyToForge() {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
     const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
-    if (packName == undefined || packDescription == undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2])) return false;
+    const packIcon = document.getElementById("packIcon").files[0];
+    if (packName == undefined || packDescription == undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2]) || packIcon == undefined) return false;
     else return true;
 }
 
@@ -129,6 +130,8 @@ async function forgePack() {
     let pack = new JSZip();
     pack.file("BP/manifest.json", forgeManifest("data"));
     pack.file("RP/manifest.json", forgeManifest("resources"));
+    pack.file("BP/pack_icon.png", document.getElementById("packIcon").files[0]);
+    pack.file("BP/pack_icon.png", document.getElementById("packIcon").files[0]);
     itemsBp.forEach(item => {
         pack.file(`BP/items/${item[1].split(":")[1]}.json`, forgeItemJson(item));
         pack.file("BP/texts/fr_FR.lang", forgeCompleteItemLang());
