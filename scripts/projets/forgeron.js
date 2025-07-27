@@ -27,9 +27,9 @@ function isInt(numbers) {
     console.log(typeof numbers);
     const intList = "0123456789".split("");
     const strList = numbers.split("");
-    strList.forEach(c => {
+    for (let c of strList) {
         if (!intList.includes(c)) return false;
-    });
+    }
     return true;
 }
 
