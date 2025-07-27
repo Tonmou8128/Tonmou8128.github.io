@@ -23,16 +23,6 @@ function uuid() {
   return newUuid;
 }
 
-function isInt(numbers) {
-    console.log(typeof numbers);
-    const intList = "0123456789".split("");
-    const strList = numbers.split("");
-    for (let c of strList) {
-        if (!intList.includes(c)) return false;
-    }
-    return true;
-}
-
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
@@ -117,7 +107,7 @@ function readyToForge() {
     const packDescription = document.getElementById("packDescription").value;
     const packVersion = [parseInt(document.getElementById("packVersion1").value), parseInt(document.getElementById("packVersion2").value), parseInt(document.getElementById("packVersion3").value)];
     const packIcon = document.getElementById("packIcon").files[0];
-    if (packName == undefined || packDescription == undefined || !isInt(packVersion[0]) || !isInt(packVersion[1]) || !isInt(packVersion[2]) || packIcon == undefined) return false;
+    if (packName == undefined || packDescription == undefined || isNan(packVersion[0]) || isNan(packVersion[1]) || isNan(packVersion[2]) || packIcon == undefined) return false;
     else return true;
 }
 
