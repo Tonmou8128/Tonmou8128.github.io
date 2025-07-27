@@ -23,6 +23,28 @@ function uuid() {
   return newUuid;
 }
 
+function changeSubMenu(value) {
+    document.querySelectorAll(".subMenu").forEach(menu => {
+        menu.style.display = "none";
+    });
+    switch (value) {
+        case "construction":
+            document.getElementById("constructionSubMenu").style.display = "block";
+            break;
+        case "equipment":
+            document.getElementById("equipmentSubMenu").style.display = "block";
+            break;
+        case "items":
+            document.getElementById("itemsSubMenu").style.display = "block";
+            break;
+        case "nature":
+            document.getElementById("natureSubMenu").style.display = "block";
+            break;
+        default:
+            break;
+    };
+}
+
 function forgeManifest(type) {
     const packName = document.getElementById("packName").value;
     const packDescription = document.getElementById("packDescription").value;
