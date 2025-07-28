@@ -73,17 +73,18 @@ function addItem() {
     const itemIcon = document.getElementById("itemIcon").files[0];
     const itemIconName = itemId.split(":")[1];
     const itemCategory = document.getElementById("itemCategory").value;
+    const itemGroup = document.getElementsByClassName("subMenu")[0].value;
     if (!itemName || !itemId || !itemIcon || !itemCategory) {
         alert("Veuillez remplir tous les champs obligatoires.");
         return;
     };
-    itemsBp.push([itemName, itemId, itemIconName, itemCategory]);
+    itemsBp.push([itemName, itemId, itemIconName, itemCategory, itemGroup ?? null]);
     itemsRp.push(itemIcon);
     alert("Item ajouté avec succès.")
 }
 
-function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
-    const item = {
+function forgeItemJson([itemName, itemId, itemIcon, itemCategory, itemGroup]) {
+    let item = {
         format_version: "1.21.90",
         "minecraft:item": {
             description: {
@@ -96,6 +97,9 @@ function forgeItemJson([itemName, itemId, itemIcon, itemCategory]) {
                 "minecraft:icon": itemId
             }
         }
+    };
+    if (itemGroup !== null) {
+        item["minecraft:item"].description.menu_category.group = itemGroup;
     };
     return JSON.stringify(item, null, 2);
 }
