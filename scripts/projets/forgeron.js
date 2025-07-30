@@ -165,4 +165,4 @@ async function forgePack() {
 
 document.querySelector("button#download").addEventListener("click", forgePack);
 document.querySelector("button#addItem").addEventListener("click", addItem);
-document.getElementById("itemCategory").addEventListener("change", changeSubMenu(this.value));
+document.getElementById("itemCategory").addEventListener("change", function() {changeSubMenu(this.value)});
