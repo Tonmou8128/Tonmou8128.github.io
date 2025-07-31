@@ -105,7 +105,7 @@ function forgeItemJson([itemName, itemId, itemIcon, itemCategory, itemGroup]) {
 }
 
 function forgeItemLang(itemName, itemId) {
-    return `item.${itemId}.name=${itemName}`;
+    return `item.${itemId}=${itemName}`;
 }
 
 function forgeCompleteItemLang() {
