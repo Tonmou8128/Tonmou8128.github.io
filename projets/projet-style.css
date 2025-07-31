@@ -5,14 +5,14 @@ img {
     justify-content: center;
 }
 
-.verticaldiv {
+.leftmain, .rightmain {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 40px;
 }
 
-.horizontaldiv {
+.container {
   display: flex;
   align-items: center;
   flex-direction: row;
