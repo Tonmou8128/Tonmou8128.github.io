@@ -73,7 +73,7 @@ function addItem() {
     const itemIcon = document.getElementById("itemIcon").files[0];
     const itemIconName = itemId.split(":")[1];
     const itemCategory = document.getElementById("itemCategory").value;
-    const itemGroup = document.getElementsByClassName("subMenu")[0].value;
+    const itemGroup = [...document.getElementsByClassName("subMenu")][0].value;
     if (!itemName || !itemId || !itemIcon || !itemCategory) {
         alert("Veuillez remplir tous les champs obligatoires.");
         return;
