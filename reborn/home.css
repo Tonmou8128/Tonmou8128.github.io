@@ -3,3 +3,23 @@
     width: 1500px;
     height: 300px;
 }
+
+.bordered {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 15%;
+    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.3));
+}
+
+.bordered:hover {
+    filter: drop-shadow(27px 27px 10px rgba(0, 0, 0, 0.3));
+}
+
+.bordered > * {
+    flex: 1 1 400px; /*gne ?*/
+    height: auto;
+    width: clamp(50px, 50%, 100%);
+    padding: 10px;
+}

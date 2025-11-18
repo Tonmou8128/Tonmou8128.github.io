@@ -1,0 +1,134 @@
+#superposition {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-items: center;
+    padding: 25px 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(370px, 30%, 70%), 1fr)); /* aled j'ai passé 2h dessus pas toucher svp */
+    justify-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+}
+
+.icon {
+    width: 40%;
+    height: auto;
+    margin: 40px;
+    padding: 100px;
+    cursor: pointer;
+    transition: transform 0.4s ease-out, opacity 0.4s linear;
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 20px solid rgba(0, 0, 0, 0.4);
+    border-right: 20px solid rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.icon.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.icon:hover {
+    transform: scale(1.01) translateX(-7px) translateY(-7px);
+}
+
+#infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.infos {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    transition: transform 0.4s ease-out, opacity 0.4s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infos.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.infos:hover {
+    transform: scale(1.01) translateX(-7px) translateY(-7px);
+}
+
+.infos > * {
+    width: 100%;
+    height: 100%;
+}
+
+.insideInfo {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.insideInfo > h3 {
+    font-size: clamp(10px, 2.5vw, 250px);
+}
+
+.insideInfo > p {
+    font-size: clamp(7px, 1.3vw, 80px);
+    width: 100%;
+    height: 100%;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
+    padding: 0;
+}
+
+.bordered {
+    flex-direction: column;
+}
+
+.S {
+    background: #ff7f80;
+    width: 20%;
+    text-align: center;
+}
+
+.A {
+    background: #ffc07f;
+    width: 20%;
+    text-align: center;
+}
+
+.B {
+    background: #ffff7f;
+    width: 20%;
+    text-align: center;
+}
+
+.C {
+    background: #bfff7f;
+    width: 20%;
+    text-align: center;
+}
+
