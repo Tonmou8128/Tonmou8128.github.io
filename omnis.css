@@ -8,7 +8,7 @@ body {
     display: flex;
     background: white;
     font-family: "Century Gothic", sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     flex-direction: column;
     align-items: center;
     --bg-color1: rgba(255, 81, 28, 0.5);
@@ -20,12 +20,12 @@ body {
 }
 
 p:not(header p):not(footer p), a:not(header a) {
-    padding: 25px clamp(10px, 20vw, 600px);
+    padding: 13px clamp(5px, 10vw, 300px);
     text-align: center;
 }
 
 h1 {
-    font-size: clamp(80px, 11vw, 130px);
+    font-size: clamp(40px, 6vw, 65px);
     margin: 0;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(40px, 7vw, 90px);
+    font-size: clamp(20px, 4vw, 45px);
     margin: 0;
     display: flex;
     align-items: center;
@@ -46,42 +46,42 @@ h2 {
 
 header, footer {
     width: 90%;
-    margin: 25px;
+    margin: 13px;
     background: rgba(0, 0, 0, 0.8);
-    border-bottom: 20px solid rgba(0, 0, 0, 0.4);
-    border-right: 20px solid rgba(0, 0, 0, 0.4);
-    border-radius: 80px;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.4);
+    border-right: 10px solid rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
     transition: all 0.4s ease-out;
-    font-size: 60px;
+    font-size: 30px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: clamp(10px, 2%, 150px);
-    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.3);
+    gap: clamp(5px, 2%, 75px);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 header {
-    height: 150px;
+    height: 75px;
 }
 
 footer {
-    height: 75px;
+    height: 37px;
     margin-top: auto;
-    font-size: clamp(10px, 3.75vw, 40px);
+    font-size: clamp(5px, 1.85vw, 20px);
     justify-content: center;
 }
 
 header:hover, footer:hover {
-    transform: scale(1.01) translateX(-7px) translateY(-7px);
-    box-shadow: 27px 27px 10px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.01) translateX(-4px) translateY(-4px);
+    box-shadow: 14px 14px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 header a, header p {
     color: inherit;
     text-decoration: none;
-    margin-right: clamp(10px, 5%, 150px);
-    font-size: clamp(20px, 4vw, 60px);
+    margin-right: clamp(5px, 2.5%, 75px);
+    font-size: clamp(10px, 2vw, 30px);
 }
 
 header img {
@@ -92,30 +92,30 @@ header img {
 
 .bordered {
     width: 70%;
-    border: 20px solid rgba(0, 0, 0, 0.8);
-    border-radius: 80px;
-    margin: 80px clamp(10px, 5%, 150px);
-    padding: 20px;
+    border: 10px solid rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+    margin: 40px clamp(5px, 2.5%, 75px);
+    padding: 10px;
     transition: all 0.4s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.3));
 }
 
 .bordered:hover {
-    transform: scale(1.01) translateX(-7px) translateY(-7px);
+    transform: scale(1.01) translateX(-4px) translateY(-4px);
 }
 
 table {
     width: 90%;
-    margin: 50px 0;
+    margin: 25px 0;
     border-collapse: collapse;
 }
 
 td {
-    border: 5px solid black;
-    padding: 40px 20px;
+    border: 2.5px solid black;
+    padding: 20px 10px;
     margin: 0;
 }
