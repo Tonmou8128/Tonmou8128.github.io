@@ -8,7 +8,7 @@
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(370px, 30%, 70%), 1fr)); /* aled j'ai passé 2h dessus pas toucher svp */
+    grid-template-columns: repeat(auto-fit, minmax(clamp(370px, 30%, 70%), 1fr)); /* aled j'ai passé 2h dessus pas touche stp */
     justify-items: center;
     width: 80%;
     height: 100%;
