@@ -93,11 +93,11 @@
 }
 
 .insideInfo > h3 {
-    font-size: clamp(5px, 1.75vw, 125px);
+    font-size: clamp(10px, 3.5vw, 250px);
 }
 
 .insideInfo > p {
-    font-size: clamp(4px, 0.65vw, 40px);
+    font-size: clamp(8px, 1.3vw, 80px);
     width: 100%;
     height: 100%;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.75);
