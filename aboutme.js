@@ -14,9 +14,7 @@ infos.forEach(element => {
     element.addEventListener("click", (event) => {
         images.forEach(image => {
             element.classList.remove("visible");
-            images.forEach(image => {
-                image.classList.remove("hidden");
-            });
+            image.classList.remove("hidden");
         });
     });
 });
