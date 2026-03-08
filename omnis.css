@@ -159,3 +159,8 @@ td {
     margin-right: clamp(5px, 2.5%, 75px);
     font-size: clamp(10px, 2vw, 30px);
 }
+
+.midImage {
+    width: 50%;
+    margin: 50px;
+}
