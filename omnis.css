@@ -90,6 +90,16 @@ header img {
     margin-right: auto;
 }
 
+.headerImg {
+    width: 10%;
+    height: 80%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 .bordered {
     width: 70%;
     border: 10px solid rgba(0, 0, 0, 0.8);
@@ -143,4 +153,9 @@ td {
 
 .icon:hover {
     transform: scale(1.01) translateX(-7px) translateY(-7px);
+}
+
+#githubIcon {
+    margin-right: clamp(5px, 2.5%, 75px);
+    font-size: clamp(10px, 2vw, 30px);
 }
