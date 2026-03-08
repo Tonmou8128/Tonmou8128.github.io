@@ -25,7 +25,7 @@ p:not(header p):not(footer p), a:not(header a) {
 }
 
 h1 {
-    font-size: clamp(40px, 6vw, 65px);
+    font-size: clamp(50px, 6vw, 65px);
     margin: 0;
     display: flex;
     align-items: center;
@@ -118,4 +118,29 @@ td {
     border: 2.5px solid black;
     padding: 20px 10px;
     margin: 0;
+}
+
+.icon {
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    padding: 50px;
+    cursor: pointer;
+    transition: transform 0.4s ease-out, opacity 0.4s linear;
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 20px solid rgba(0, 0, 0, 0.4);
+    border-right: 20px solid rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.icon.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.icon:hover {
+    transform: scale(1.01) translateX(-7px) translateY(-7px);
 }

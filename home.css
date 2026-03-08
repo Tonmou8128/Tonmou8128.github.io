@@ -1,7 +1,9 @@
 #magicTitle {
+    grid-column: 2;
     transform-origin: center;
-    width: 750px;
+    width: 650px;
     height: 150px;
+    text-align: center;
 }
 
 .bordered {
@@ -37,4 +39,131 @@ a {
     color: black;
     display:block;
     justify-items: center;
+}
+
+#mainDiv {
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    align-items: center;
+}
+
+#spotifyDiv {
+    grid-column: 3;
+    width: 250px;
+    height: 100px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    cursor: default;
+    transition: transform 0.4s ease-out, opacity 0.4s linear;
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 10px solid rgba(0, 0, 0, 0.4);
+    border-right: 10px solid rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#spotifyDiv.hidden {
+    display: none;
+}
+
+#spotifyDiv:hover {
+    transform: scale(1.01) translateX(-7px) translateY(-7px);
+}
+
+#spotifyMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; /* ou clamp pour responsive */
+    height: 60%;
+    padding: 5px;
+    margin: 0;
+    gap: 0;
+}
+
+.spotifyIcon {
+    width: auto;
+    height: 100%;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 0;
+}
+
+#spotifyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* prend le reste de l'espace */
+}
+
+#spotifyTitle, #spotifyAuthors, #spotifyTrackLine, #spotifyListening {
+    font-size: 60%;
+    color: white;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 0;
+    margin: 3px;
+}
+
+#spotifyTrackLine {
+    background: white;
+    position: relative;
+    min-height: 3px;
+    width: 50%;
+    margin: 5px 0;
+}
+
+#spotifyTimeListened {
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%) translateX(-30px);
+    font-size: 12px;
+}
+
+#spotifyTotalTime {
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%) translateX(30px);
+    font-size: 12px;
+}
+
+#spotifyAuthors {
+    color: darkgray;
+}
+
+@media (max-width: 1325px) {
+
+    #mainDiv {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center;
+    }
+
+    #magicTitle {
+        grid-column: 1;
+    }
+
+    #spotifyDiv {
+        grid-column: 1;
+        justify-self: center;
+        justify-content: center;
+        width: clamp(200px, 40vw, 250px);
+    }
+
 }

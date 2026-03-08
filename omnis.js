@@ -12,5 +12,4 @@ document.addEventListener("mousemove", (event) => {
     document.body.style.setProperty("--bg-color1", `rgba(255, ${green}, ${blue2}, 0.5)`);
     document.body.style.setProperty("--bg-color2", `rgba(${red2}, 255, ${blue}, 0.5)`);
     document.body.style.setProperty("--bg-angle", angle + "deg");
-
 })
