@@ -4,6 +4,28 @@ const words = ["un Giga Chad", "moi", "un pro", "Toumou", "le dieu", "un gars ch
 
 const title = document.getElementById("magicTitle");
 
+title.addEventListener("mouseenter", (event) => {
+    title.style.transition = "transform 0.1s ease-in-out";
+    title.style.transform = `scale(${Math.random() * 0.5 + 1}) rotate(${Math.random() * 20 - 10}deg)`;
+    title.style.animation = "breathe 2s infinite ease-in-out";
+    setTimeout(() => {
+        title.textContent = words[Math.floor(Math.random() * words.length)];
+    }, 150);
+
+});
+
+title.addEventListener("mouseleave", (event) => {
+    title.style.transition = "transform 0.1s ease-in-out";
+    title.style.transform = "none";
+    title.style.animation = "none";
+    setTimeout(() => {
+        title.textContent = "Tonmou8128";
+        title.style.transform = "rotateY(0deg)";
+    }, 150);
+})
+
+// ----------[ SPOTIFY ]----------
+
 const spotifyDiv = document.getElementById("spotifyDiv");
 const spotifyIcon = document.getElementById("spotifyCover");
 const spotifyTitle = document.getElementById("spotifyTitle");
@@ -30,23 +52,3 @@ if (currentTrack["is_playing"]) {
     spotifyTimeListened.textContent = `${Math.floor((currentTrack["time_listened"] / 1000 / 60))}:${Math.floor((currentTrack["time_listened"] / 1000) % 60).toString().padStart(2, "0")}`;
     spotifyTotalTime.textContent = `${Math.floor((currentTrack["total_time"] / 1000 / 60))}:${Math.floor((currentTrack["total_time"] / 1000) % 60).toString().padStart(2, "0")}`;
 }
-
-title.addEventListener("mouseenter", (event) => {
-    title.style.transition = "transform 0.1s ease-in-out";
-    title.style.transform = `scale(${Math.random() * 0.5 + 1}) rotate(${Math.random() * 20 - 10}deg)`;
-    title.style.animation = "breathe 2s infinite ease-in-out";
-    setTimeout(() => {
-        title.textContent = words[Math.floor(Math.random() * words.length)];
-    }, 150);
-
-});
-
-title.addEventListener("mouseleave", (event) => {
-    title.style.transition = "transform 0.1s ease-in-out";
-    title.style.transform = "none";
-    title.style.animation = "none";
-    setTimeout(() => {
-        title.textContent = "Tonmou8128";
-        title.style.transform = "rotateY(0deg)";
-    }, 150);
-})
