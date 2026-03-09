@@ -1,6 +1,6 @@
 // ----------[ TITLE ]----------
 
-const words = ["un Giga Chad", "moi", "un professionnel", "print('Tonmou8128')", "l'idole de tous", "un gars ordinaire", "un passionné", "un artiste", "un mec cool", "un beau gosse", "le dieu du code", "un gros sing- quoi ??"];
+const words = ["un Giga Chad", "moi", "un pro", "Toumou", "le dieu", "un gars chill", "un passionné", "un artiste", "un mec cool", "un beau gosse", "le génie du code", "un gros singe", "jsp", "les Ch'tis", "une star", "ChatGPT (omg)", "Bibi", "missa", "une tête de neuille", "votre roi", "zehc eunevneiB", "𝕿𝖔𝖓𝖒𝖔𝖚", "noɯuo⊥", "un poête", "mouaa", "'-'"];
 
 const title = document.getElementById("magicTitle");
 
