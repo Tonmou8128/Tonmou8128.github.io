@@ -44,6 +44,16 @@ h2 {
     padding: 25px;
 }
 
+h3 {
+    font-size: clamp(10px, 3vw, 30px);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
 header, footer {
     width: 90%;
     margin: 13px;
